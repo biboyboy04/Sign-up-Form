@@ -4,53 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Sign-up Form</title>
 </head>
 <body>
     <div class="sidebar">
         <div class="logo">
-            <div class="logo-pic">
-
-            </div>
-            <div class="logo-text">
-
-            </div>
+            <img class="logo-pic" src="assets/odin-lined.png" alt="Logo">
+            <p class="logo-text">Odin</p>
         </div>
-        <div class="attribution">
-        
-        </div>
+        <p class="attribution">Photo by: <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a>
+         on <a href="https://unsplash.com/photos/NTYYL9Eb9y8">Unsplash</a></p>
     </div>
     <div class="content">
-        <h1></h1>
+        <h2>This is not a real online service! You know you need something like
+        this in your life to help your realize your deepest dreams.</h2>
+        <h2>Sign up <i>now</i> to get started</h2>
         <br>
-        <h1></h1>
-        <form action=" " method="post">
+        <h2>You <i>know</i> you want to.</h2>
+        <form id="sign_up_form">
             <div class="form-container">
-                <div class="form-row">
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name">
-
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name">
+                <h2>Let's do this!</h2>
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="first_name">FIRST NAME</label>
+                        <input type="text" id="first_name" name="first_name">
+                    </div>
+                    <div class="label-container">
+                        <label for="last_name">LAST NAME</label>
+                        <input type="text" id="last_name" name="last_name">
+                    </div>
                 </div>
-                <div class="form-row">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email">
-
-                    <label for="phone_number">PHONE NUMBER</label>
-                    <input type="number" id="phone_number" name="phone_number">
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="email">EMAIL</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="label-container">
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="number" id="phone_number" name="phone_number">
+                    </div>
                 </div>
-                <div class="form-row">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" id="password" name="password">
-
-                    <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm_password" name="confirm_password">
+                <div class="form-group">
+                    <div class="label-container">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="label-container">
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm_password" name="confirm_password">
+                    </div>
                 </div>
             </div>
-            <input type="button" id="create_account" name="create_account" value="Create Account">
+            <input type="submit" id="create_account" name="create_account" value="Create Account">
         </form>
-        <p>Already have an account? <a href="">Log in</a></p>
+        <p>Already have an account? <a class="login-button" href="">Log in</a></p>
     </div>
 </body>
 </html>
