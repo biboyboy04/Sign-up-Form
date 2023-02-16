@@ -12,8 +12,8 @@
 <body>
     <div class="sidebar">
         <div class="logo">
-            <img class="logo-pic" src="assets/odin-lined.png" alt="Logo">
-            <p class="logo-text">Odin</p>
+            <img class="pic" src="assets/odin-lined.png" alt="Logo">
+            <p class="text">Odin</p>
         </div>
         <p class="attribution">Photo by: <a href="https://unsplash.com/@pawel_czerwinski">Pawel Czerwinski</a>
          on <a href="https://unsplash.com/photos/NTYYL9Eb9y8">Unsplash</a></p>
@@ -24,41 +24,42 @@
         <h2>Sign up <i>now</i> to get started</h2>
         <br>
         <h2>You <i>know</i> you want to.</h2>
-        <form id="sign_up_form">
-            <div class="form-container">
+        <form id="sign-up-form" onsubmit="return false">
+            <div class="container">
                 <h2>Let's do this!</h2>
-                <div class="form-group">
+                <div class="group">
                     <div class="label-container">
                         <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name">
+                        <input type="text" id="first_name" name="first_name" required>
                     </div>
                     <div class="label-container">
                         <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name" name="last_name">
+                        <input type="text" id="last_name" name="last_name" required>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="group">
                     <div class="label-container">
                         <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" required>
                     </div>
                     <div class="label-container">
                         <label for="phone_number">PHONE NUMBER</label>
-                        <input type="number" id="phone_number" name="phone_number">
+                        <input type="number" id="phone_number" name="phone_number" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="label-container">
+                <div class="group">
+                    <div id="password-container" class="label-container">
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" required>
+                        <p id="password-not-match"></p>
                     </div>
                     <div class="label-container">
                         <label for="confirm_password">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirm_password" name="confirm_password">
+                        <input type="password" id="confirm_password" name="confirm_password" required>
                     </div>
                 </div>
             </div>
-            <input type="submit" id="create_account" name="create_account" value="Create Account">
+            <input onclick="isPasswordMatch()" type="submit" id="create_account" name="create_account" value="Create Account">
         </form>
         <p>Already have an account? <a class="login-button" href="">Log in</a></p>
     </div>
